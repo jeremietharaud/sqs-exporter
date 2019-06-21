@@ -1,6 +1,8 @@
 # Simple AWS SQS exporter
 
-A Prometheus SQS metrics exporter
+A Prometheus SQS metrics exporter.
+
+This repository has been forked from [ashiddo11/sqs-exporter](https://github.com/ashiddo11/sqs-exporter).
 
 ## Metrics
 
@@ -54,11 +56,11 @@ To run the SQS exporter on Docker, you need to specify the region to connect to.
 When running on an ec2 machine using IAM role:
 
 ```
-$ docker run -e AWS_REGION=<region> -d -p 9434:9434 ashiddo11/sqs-exporter
+$ docker run -e AWS_REGION=<region> -d -p 9434:9434 jeremietharaud/sqs-exporter
 ```
 
 When running it externally:
 
 ```
-$ docker run -d -p 9434:9434 -e AWS_ACCESS_KEY_ID=<access_key> -e AWS_SECRET_ACCESS_KEY=<secret_key> -e AWS_REGION=<region>  ashiddo11/sqs-exporter
+$ docker run -d -p 9434:9434 -e AWS_ACCESS_KEY_ID=<access_key> -e AWS_SECRET_ACCESS_KEY=<secret_key> -e AWS_REGION=<region>  jeremietharaud/sqs-exporter
 ```
